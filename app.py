@@ -15,6 +15,7 @@ for chat_message in st.session_state.messages:
 user_message = st.chat_input("Type your career question here...")
 
 if user_message:
+    st.session_state.messages.append(
         {"role": "user", "content": user_message}
     )
 
